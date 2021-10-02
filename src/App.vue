@@ -2,7 +2,6 @@
   <v-app>
     <v-main>
       <barraInicial />
-      <menuJogos />
       <router-view />
       <BarraSelecao />
     </v-main>
@@ -12,16 +11,12 @@
 <script>
 import barraInicial from "./components/shared/barraInicial";
 import BarraSelecao from "./components/shared/BarraSelecao";
-//import menuAnimes from "./components/menuAnimes.vue";
-import menuJogos from "./components/menuJogos.vue"
 
 export default {
   name: "App",
   components: {
     barraInicial,
-    BarraSelecao,
-    //menuAnimes,
-    menuJogos
+    BarraSelecao
   },
 };
 </script>

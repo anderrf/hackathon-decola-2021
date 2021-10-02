@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import menuAnimes from '../views/menuAnimes.vue'
+import menuAnimes from '../views/menuAnimes'
+import menuJogos from '../views/menuJogos'
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,10 @@ const routes = [
   {
     path: '/animes',
     component: menuAnimes
+  },
+  {
+    path: '/games',
+    component: menuJogos
   }
 ]
 
