@@ -19,5 +19,8 @@
     }
 </script>
 <style scoped>
-
+    .my-3 {
+        height: 35px;
+        width: 35px;
+    }
 </style>
