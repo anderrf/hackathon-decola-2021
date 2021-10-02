@@ -24,11 +24,13 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
+      <BotaoCompartilhar/>
     </v-navigation-drawer>
   </div>
 </template>
 
 <script>
+import BotaoCompartilhar from '../components/shared/BotaoCompartilhar'
 export default {
   name: "menuJogos",
 
@@ -42,7 +44,9 @@ export default {
       group: null
     };
   },
-
+  components: {
+    BotaoCompartilhar
+  },
   created() {
     fetch("https://it3zxc-default-rtdb.firebaseio.com/lazer/jogos.json")
       .then((conteudo) => conteudo.json())
