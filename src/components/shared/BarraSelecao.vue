@@ -18,9 +18,13 @@
         name: 'BarraSelecao'
     }
 </script>
+
 <style scoped>
-    .my-3 {
-        height: 35px;
-        width: 35px;
+    .barra-selecao {
+        position: fixed;
+        text-align: center;
+        bottom: 0px;
+        width: 100%;
     }
+
 </style>
