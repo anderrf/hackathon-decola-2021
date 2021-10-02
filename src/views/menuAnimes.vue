@@ -1,9 +1,30 @@
 <template>
   <div class="menuAnimes">
-    <div v-for="item of animes" :key="item.id" class="content-wrapper">
+    <div v-for="item of animes" :key="item.id" class="content-wrapper" @click="openDrawer(item)">
       <div class="circular"><img :src="item.photo" :alt="item.name" /></div>
       <p>{{ item.name }}</p>
     </div>
+    <v-navigation-drawer v-model="drawer" absolute temporary class="detalhe-lateral" color="#F4F4F4">
+      <v-list dense>
+        <v-list-item-group v-model="group">
+            <v-list-item>
+              <h3>{{anime.name}}</h3>
+            </v-list-item>
+            <v-list-item>
+              <img :src="anime.photo" :alt="anime.name" class="anime-detalhe">
+            </v-list-item>
+            <v-list-item>
+              <p class="anime-descricao">{{anime.description}}</p>
+            </v-list-item>
+            <v-list-item>
+              <p>{{anime.genre}}</p>
+            </v-list-item>
+            <v-list-item>
+              <p>{{anime.status}}</p>
+            </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 
@@ -13,6 +34,9 @@ export default {
   data() {
     return {
       animes: [],
+      anime: {},
+      drawer: false,
+      group: null
     };
   },
 
@@ -23,6 +47,12 @@ export default {
         this.animes = json;
       });
   },
+  methods: {
+    openDrawer(item){
+      this.drawer = true;
+      this.anime = item;
+    }
+  }
 };
 </script>
 
@@ -72,6 +102,20 @@ template{
     font-family: Roboto;
     font-size: 15px;
     font-weight: 700;
+}
+
+.detalhe-lateral{
+  position: fixed;
+}
+
+.anime-detalhe{
+  max-height: 20vh;
+  max-width: 80%;
+  margin: 10px auto;
+}
+
+.anime-descricao{
+  text-align: justify;
 }
 
 </style>
