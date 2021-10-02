@@ -17,7 +17,7 @@
               <p class="anime-descricao">{{anime.description}}</p>
             </v-list-item>
             <v-list-item>
-              <p>{{anime.genre}}</p>
+              <p>Categoria: {{anime.genre}}</p>
             </v-list-item>
             <v-list-item>
               <p>{{anime.status}}</p>
