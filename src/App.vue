@@ -1,16 +1,23 @@
 <template>
-  <barraInicial/>
+  <v-app>
+    <v-main>
+      <barraInicial/>
+      <router-view/>
+      <BarraSelecao/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import barraInicial from "./components/barraInicial.vue";
-
-export default {
-  name: "App",
-  components: {
-    barraInicial,
-  },
-};
+  import barraInicial from './components/shared/barraInicial';
+  import BarraSelecao from './components/shared/BarraSelecao';
+  export default {
+    name: 'App',
+    components: {
+      barraInicial,
+      BarraSelecao
+    }
+  }
 </script>
 <style>
 * {
