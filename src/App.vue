@@ -1,14 +1,16 @@
 <template>
-  <barraInicial/>
+  <menuAnimes/>
 </template>
 
 <script>
-import barraInicial from "./components/barraInicial.vue";
+//import barraInicial from "./components/barraInicial.vue";
+import menuAnimes from "./components/menuAnimes.vue";
 
 export default {
   name: "App",
   components: {
-    barraInicial,
+    //barraInicial, 
+    menuAnimes
   },
 };
 </script>
