@@ -9,8 +9,7 @@
 
 <script>
 export default {
-  name: "menuAnimes",
-
+  name: 'menuAnimes',
   data() {
     return {
       animes: [],
