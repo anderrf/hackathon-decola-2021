@@ -17,15 +17,16 @@ export default {
 
 <style scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
 
 .texto{
     font-family: Poppins;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
     text-align: center;
     color: #232020;
-    padding: 10px 0 0px;
-    font-size: 15px;
+    padding: 10px 5px 0;
 }
 
 .tracinho{
