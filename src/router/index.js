@@ -1,14 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Inicio from '../views/Inicio'
+import menuAnimes from '../views/menuAnimes.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    component: Inicio,
-
+    redirect: '/animes'
+  },
+  {
+    path: '/animes',
+    component: menuAnimes
   }
 ]
 
