@@ -18,16 +18,13 @@ export default {
   name: "BarraSelecao",
 };
 </script>
-<style scoped>
-.barra-selecao {
-  position: fixed;
-  text-align: center;
-  bottom: 0px;
-  width: 100%;
-}
 
-.my-3 {
-  width: 35px;
-  height: 70px;
-}
+<style scoped>
+    .barra-selecao {
+        position: fixed;
+        text-align: center;
+        bottom: 0px;
+        width: 100%;
+    }
+
 </style>
