@@ -1,23 +1,29 @@
 <template>
   <v-app>
     <v-main>
-      <barraInicial/>
-      <router-view/>
-      <BarraSelecao/>
+      <barraInicial />
+      <menuJogos />
+      <router-view />
+      <BarraSelecao />
     </v-main>
   </v-app>
 </template>
 
 <script>
-  import barraInicial from './components/shared/barraInicial';
-  import BarraSelecao from './components/shared/BarraSelecao';
-  export default {
-    name: 'App',
-    components: {
-      barraInicial,
-      BarraSelecao
-    }
-  }
+import barraInicial from "./components/shared/barraInicial";
+import BarraSelecao from "./components/shared/BarraSelecao";
+//import menuAnimes from "./components/menuAnimes.vue";
+import menuJogos from "./components/menuJogos.vue"
+
+export default {
+  name: "App",
+  components: {
+    barraInicial,
+    BarraSelecao,
+    //menuAnimes,
+    menuJogos
+  },
+};
 </script>
 <style>
 * {
